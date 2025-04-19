@@ -89,7 +89,7 @@ export function Typewriter() {
         </motion.span>
       </div>
       <div className="mt-10 w-full">
-        <button className="w-40 h-10 rounded-xl bg-green-500 hover:bg-green-600 transition-colors duration-200 text-white text-sm font-medium float-right">
+        <button className="w-40 h-10 rounded-l border border-white bg-black text-white hover:bg-white hover:text-black transition-colors duration-200 text-sm font-medium float-right">
           View Projects
         </button>
       </div>
