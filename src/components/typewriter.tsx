@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { motion, stagger, useAnimate } from "motion/react";
+import { motion, useAnimate } from "motion/react";
 import { useEffect, useState } from "react";
 
 export function Typewriter() {
@@ -14,7 +14,7 @@ export function Typewriter() {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [scope, animate] = useAnimate();
+  const [scope] = useAnimate();
   
   useEffect(() => {
     const currentSkill = skills[currentSkillIndex];
@@ -88,8 +88,8 @@ export function Typewriter() {
           />
         </motion.span>
       </div>
-      <div className="mt-50 w-full">
-        <button className="w-40 h-10 rounded-l border border-white bg-black text-white hover:bg-white hover:text-black transition-colors duration-200 text-sm font-medium float-right">
+      <div className="mt-10 w-full">
+        <button className="w-40 h-10 rounded-xl bg-green-500 hover:bg-green-600 transition-colors duration-200 text-white text-sm font-medium float-right">
           View Projects
         </button>
       </div>
