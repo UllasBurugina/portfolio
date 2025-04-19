@@ -89,9 +89,17 @@ export function Typewriter() {
         </motion.span>
       </div>
       <div className="mt-10 w-full">
-        <button className="w-40 h-10 rounded-l border border-white bg-black text-white hover:bg-white hover:text-black transition-colors duration-200 text-sm font-medium float-right">
-          View Projects
-        </button>
+      <button 
+              onClick={() => {
+                const projectsSection = document.getElementById('projects');
+                  if (projectsSection) {
+                    projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+              }}
+              className="w-40 h-10 rounded-l border border-white bg-black text-white hover:bg-white hover:text-black transition-colors duration-200 text-sm font-medium float-right"
+      >
+        View Projects
+      </button>
       </div>
     </div>
   );
