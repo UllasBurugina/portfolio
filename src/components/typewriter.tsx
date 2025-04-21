@@ -5,9 +5,8 @@ import { useEffect, useState } from "react";
 
 export function Typewriter() {
   const skills = [
-    "Full-Stack Developer",
+    "Web Developer",
     "AI/ML Engineer",
-    "Cloud Architect",
     "Problem Solver",
   ];
   
@@ -50,9 +49,7 @@ export function Typewriter() {
   
   return (
     <div className="flex flex-col items-start justify-center h-[40rem] w-full px-8 md:px-24">
-      <p className="text-neutral-600 dark:text-neutral-200 text-base mb-10 text-left">
-        Passionate about building innovative solutions
-      </p>
+      {/* Typewriter Text */}
       <div className="flex items-center space-x-2">
         <motion.span 
           initial={{ opacity: 0 }}
@@ -88,18 +85,25 @@ export function Typewriter() {
           />
         </motion.span>
       </div>
+
+      {/* Passionate Text Below */}
+      <p className="text-neutral-600 dark:text-neutral-200 text-xl font-bold mt-10 mb-10 text-left">
+        Passionate about building innovative solutions
+      </p>
+
+      {/* Button */}
       <div className="mt-10 w-full">
-      <button 
-              onClick={() => {
-                const projectsSection = document.getElementById('projects');
-                  if (projectsSection) {
-                    projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-              }}
-              className="w-40 h-10 rounded-l border border-white bg-black text-white hover:bg-white hover:text-black transition-colors duration-200 text-sm font-medium float-right"
-      >
-        View Projects
-      </button>
+        <button 
+          onClick={() => {
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+              projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }}
+          className="w-40 h-10 rounded-l border border-white bg-black text-white hover:bg-white hover:text-black transition-colors duration-200 text-sm font-medium float-right"
+        >
+          View Projects
+        </button>
       </div>
     </div>
   );
