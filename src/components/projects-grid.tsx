@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import huntForHistoryImage from "@/assets/huntforhistory.png";
 import medicareImage from "@/assets/medicare.png";
+import sandiegoesImage from "@/assets/sandiegoes.png"; // Make sure to add this image in your assets folder
 
 // Define the project type
 type Project = {
@@ -40,6 +41,15 @@ const projectsData: Project[] = [
       "Machine Learning",
     ],
     image: medicareImage,
+  },
+  {
+    title: "SanDiegoES Tour Website",
+    subtitle: "SanDiegoES",
+    description:
+      "A professional WordPress website for San Diego tours, built with Elementor and custom PHP integrations to showcase local attractions and packages.",
+    url: "https://sandiegoes.com",
+    skills: ["WordPress", "Elementor", "PHP", "CSS", "JavaScript"],
+    image: sandiegoesImage,
   },
   // Add more projects as needed
 ];
