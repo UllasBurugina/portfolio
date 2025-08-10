@@ -2,7 +2,8 @@
 import { useEffect, useRef } from "react";
 import huntForHistoryImage from "@/assets/huntforhistory.png";
 import medicareImage from "@/assets/medicare.png";
-import sandiegoesImage from "@/assets/sandiegoes.png"; // Make sure to add this image in your assets folder
+import sandiegoesImage from "@/assets/sandiegoes.png";
+import kirtonImage from "@/assets/kirton.png" // Make sure to add this image in your assets folder
 
 // Define the project type
 type Project = {
@@ -17,13 +18,13 @@ type Project = {
 // Create project data objects
 const projectsData: Project[] = [
   {
-    title: "Scavenger Hunt Website",
-    subtitle: "HuntForHistory",
+    title: "Realtor Website",
+    subtitle: "Kirton Realtor",
     description:
-      "An e-commerce website offering interactive scavenger hunts around the world, featuring image-based puzzles to explore and learn about historical sites.",
-    url: "https://huntforhistory.com",
+      "A professional realtor website for a Washington-based real estate agent, showcasing property listings, IDX integration, and an easy-to-use interface for potential buyers and sellers.",
+    url: "https://kirtonrealtor.com",
     skills: ["WordPress", "Elementor", "PHP", "CSS"],
-    image: huntForHistoryImage,
+    image: kirtonImage,
   },
   {
     title: "Medicare Health Platform",
@@ -41,6 +42,15 @@ const projectsData: Project[] = [
       "Machine Learning",
     ],
     image: medicareImage,
+  },
+  {
+    title: "Scavenger Hunt Website",
+    subtitle: "HuntForHistory",
+    description:
+      "An e-commerce website offering interactive scavenger hunts around the world, featuring image-based puzzles to explore and learn about historical sites.",
+    url: "https://huntforhistory.com",
+    skills: ["WordPress", "Elementor", "PHP", "CSS"],
+    image: huntForHistoryImage,
   },
   {
     title: "SanDiegoES Tour Website",
