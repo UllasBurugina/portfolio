@@ -1,33 +1,27 @@
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/header"
-import { Typewriter } from "./components/typewriter";
-import ProjectsGrid from "./components/projects-grid";
-import Footer from "./components/footer";
-import PortfolioCodeBlock from "./components/code";
-import { ContactSection } from "./components/contact";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import Home from "@/pages/Home";
+import MyStory from "@/pages/MyStory";
+import ProjectsPage from "@/pages/ProjectsPage";
+import ContactPage from "@/pages/ContactPage";
 
-function App() {
+const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <Header />
-      <div className="container mx-auto py-12 px-4">
-      <div className="flex flex-col md:flex-row gap-8">
-        {/* Left column - Typewriter component (80% width) */}
-        <div className="w-full md:w-3/5">
-          <Typewriter />
-        </div>
-        
-        {/* Right column - PortfolioCodeBlock component (20% width) */}
-        <div className="w-full md:w-2/5">
-          <PortfolioCodeBlock />
-        </div>
-      </div>
-      </div>
-      <ProjectsGrid />
-      <ContactSection /> 
-      <Footer />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/my-story" element={<MyStory />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        <Footer />
+      </Router>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

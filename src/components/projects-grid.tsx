@@ -22,7 +22,7 @@ const projectsData: Project[] = [
     subtitle: "Kirton Realtor",
     description:
       "A professional realtor website for a Washington-based real estate agent, showcasing property listings, IDX integration, and an easy-to-use interface for potential buyers and sellers.",
-    url: "https://kirtonrealtor.com",
+    url: "http://kirtonrealtor.com",
     skills: ["WordPress", "Elementor", "PHP", "CSS"],
     image: kirtonImage,
   },
